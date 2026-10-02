@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plic · Privacy · Privacidad</title>
+<script>
+  // En español, la política en español; en cualquier otro idioma, en inglés.
+  (function () {
+    var lang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    location.replace(lang.toLowerCase().indexOf('es') === 0 ? 'privacidad-es.html' : 'privacy-en.html');
+  })();
+</script>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.6 system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1.25rem; }
+</style>
+</head>
+<body>
+<h1>Plic</h1>
+<p><a href="privacy-en.html">Privacy Policy (English)</a></p>
+<p><a href="privacidad-es.html">Política de privacidad (español)</a></p>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plic · Política de privacidad</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 5rem;
+    color: #1a1c1e; background: #f3f9fe;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #dfe3e8; background: #0d1520; }
+    td, th { border-color: #333 !important; }
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin-bottom: .25rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.5rem; color: #1063c9; }
+  h3 { font-size: 1.05rem; margin-top: 1.75rem; }
+  @media (prefers-color-scheme: dark) { h2 { color: #7cc4ff; } }
+  .fecha { opacity: .7; font-size: .9rem; }
+  .clave { border-left: 4px solid #1e88e5; padding: .5rem 0 .5rem 1rem; margin: 1.5rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  th { font-weight: 600; }
+  code { background: rgba(127,127,127,.15); padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
+  footer { margin-top: 3rem; font-size: .9rem; opacity: .75; }
+</style>
+</head>
+<body>
+
+<h1>Política de privacidad</h1>
+<p class="fecha">Aplicación <strong>Plic</strong> (<code>com.jrsoft.beberagua</code>) · Última actualización: 1 de octubre de 2026</p>
+
+<div class="clave">
+<p><strong>En una frase:</strong> esta aplicación no tiene cuentas de usuario y
+<strong>lo que bebes y tu perfil no salen de tu teléfono</strong>. No se envían a
+ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
+</div>
+
+<h2>Quién es el responsable</h2>
+<p>El responsable del tratamiento es <strong>JR Soft</strong>, nombre comercial de <strong>Javier Román Sáez</strong>, desarrollador de la aplicación. Puedes contactar en <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong>.</p>
+
+<h2>Lo que esta aplicación NO hace</h2>
+<ul>
+  <li>No hay registro, cuenta, usuario ni contraseña. El nombre que puedes escribir para los saludos es opcional y no sale del teléfono.</li>
+  <li>No hay ninguna herramienta de analítica ni de informes de fallos: ni Google Analytics, ni Crashlytics, ni similares. La única biblioteca que envía datos propios a un tercero es la de la publicidad; se explica abajo. La aplicación incluye la biblioteca de configuración remota de Firebase (<em>Remote Config</em>), que serviría para ajustar la publicidad sin publicar una versión nueva, pero <strong>está desactivada</strong>: no arranca ni se conecta a ningún servidor. Si algún día se activa, esta política se actualizará antes.</li>
+  <li>No se venden, alquilan ni ceden datos a terceros con fines comerciales.</li>
+  <li><strong>Lo que bebes, tu peso, tu edad, tu sexo y si estás embarazada o en lactancia no se envían a ningún sitio.</strong> Son datos relacionados con la salud y se quedan en el almacenamiento privado de la aplicación. El objetivo diario se calcula dentro del teléfono.</li>
+  <li>No se usa el GPS en segundo plano ni se sigue tu ubicación. La ubicación aproximada solo se usa si activas el ajuste al tiempo, y solo con la aplicación abierta (ver abajo).</li>
+</ul>
+
+<h2>Datos que se quedan solo en tu teléfono</h2>
+<p>Esta información se guarda en el almacenamiento privado de la app y no sale de ella. Desaparece por completo si desinstalas la aplicación o borras sus datos desde los ajustes de Android (o con «Borrar todos los datos» dentro de la app).</p>
+<ul>
+  <li><strong>Tu perfil</strong>: sexo, peso, edad, actividad física, clima habitual, embarazo o lactancia, y el nombre opcional.</li>
+  <li><strong>Lo que bebes</strong>: cada vaso con su hora, la bebida, la cantidad y lo que aporta (hidratación, cafeína, azúcar, calorías y alcohol).</li>
+  <li>Tus objetivos de cada día, vasos, bebidas propias, logros y retos.</li>
+  <li>Tus ajustes: horario, recordatorios, tema, unidades e idioma.</li>
+  <li>Si activas el ajuste al tiempo: el lugar elegido (redondeado a unos 1 km) y la previsión del día.</li>
+</ul>
+
+<h3>Copias de seguridad y exportaciones</h3>
+<p>Si tienes activada la copia de seguridad de Android, el sistema guarda una copia cifrada de los datos de la app en tu cuenta de Google, como hace con el resto de apps; la gestiona Google y la controlas desde los ajustes de Android. Los ficheros que crea la app (copia de seguridad, CSV e informe PDF) solo se guardan o se comparten donde tú elijas.</p>
+
+<h2>Datos que sí salen del teléfono</h2>
+
+<h3>El tiempo (opcional): MET Norway</h3>
+<p>Si activas «Ajustar al calor», la aplicación consulta la previsión del día al servicio público del Instituto Meteorológico de Noruega (<strong>MET Norway</strong>, <code>api.met.no</code>) para sumar agua los días de calor. En la petición viajan unas <strong>coordenadas redondeadas a dos decimales</strong> (con un margen de un kilómetro, más o menos) y un identificador de la aplicación y su versión (el <em>User-Agent</em> que ese servicio exige). No viaja ningún dato tuyo ni lo que bebes.</p>
+<p>Las coordenadas salen de una de estas dos fuentes, la que elijas:</p>
+<ul>
+  <li><strong>La ubicación aproximada del teléfono</strong>, con el permiso de ubicación aproximada (<code>ACCESS_COARSE_LOCATION</code>), que solo se pide si activas esta opción y solo se usa con la aplicación abierta. Nunca en segundo plano.</li>
+  <li><strong>Una ciudad que buscas a mano.</strong> La búsqueda usa el servicio de geocodificación del propio Android (en la mayoría de teléfonos lo presta Google), que recibe el texto que escribes; y para poner nombre al lugar de tu ubicación, las coordenadas redondeadas.</li>
+</ul>
+
+<h3>Health Connect (opcional)</h3>
+<p>Health Connect es el almacén de datos de salud de Android: está en tu teléfono y comparte datos entre apps solo con los permisos que tú das. Si los activas, la aplicación puede:</p>
+<ul>
+  <li><strong>Escribir</strong> cada vaso como «hidratación» y, si lleva cafeína, azúcar o calorías, como «nutrición».</li>
+  <li><strong>Leer</strong> la hidratación que apunten otras apps (para importarla sin duplicados) y los minutos de ejercicio del día (para sumar agua a tu objetivo).</li>
+</ul>
+<p>Los datos leídos de Health Connect se usan solo para esas funciones, se quedan en el teléfono, no se envían a ningún servidor y <strong>nunca se usan para publicidad</strong>. El uso de la información recibida de Health Connect cumple la política de permisos de Health Connect, incluidos los requisitos de uso limitado (<em>Limited Use</em>). Puedes retirar los permisos cuando quieras en Health Connect.</p>
+
+<h3>Dirección IP</h3>
+<p>Como en cualquier aplicación que se conecta a internet, los servidores con los que habla la app reciben tu dirección IP: MET Norway (si usas el tiempo) y Google (publicidad y búsqueda de ciudades). Esta aplicación no tiene servidores propios y no guarda ningún registro.</p>
+
+<h3>Publicidad: Google AdMob</h3>
+<p>La aplicación muestra publicidad discreta, servida por el SDK de publicidad de Google (AdMob): un banner al pie del historial y de los logros, y anuncios nativos (con la etiqueta «Anuncio») al final de la pantalla «Hoy» y del detalle de un día, y en la lista de retos. Nunca hay anuncios a pantalla completa, ni en la bienvenida, los ajustes, la guía de hidratación, las notificaciones o el widget. Por eso declara el permiso <code>com.google.android.gms.permission.AD_ID</code>, que da acceso al identificador de publicidad de Android; este identificador es reiniciable y borrable desde <em>Ajustes de Android → Google → Anuncios</em>.</p>
+<p>Además del identificador de publicidad, el SDK de AdMob recoge el identificador del conjunto de aplicaciones (<em>app set ID</em>), las interacciones con la aplicación y con los anuncios, y datos de diagnóstico (tiempo de arranque, bloqueos y consumo de energía). Google puede usar tu dirección IP para estimar una ubicación aproximada, del orden de una ciudad. Google usa estos datos para servir y medir la publicidad, para estadísticas y para prevenir fraudes, según su propia política.</p>
+<p>En el Espacio Económico Europeo, el Reino Unido y donde la ley lo pida, la aplicación muestra el formulario de consentimiento de Google (UMP) antes de servir publicidad personalizada. Puedes cambiar tu elección cuando quieras desde Ajustes → Opciones de privacidad de los anuncios.</p>
+<p><strong>Tus datos de hidratación y de salud nunca llegan a la publicidad.</strong> La petición de anuncio sale sin ningún dato de lo que bebes ni de tu perfil. Si rechazas el consentimiento, verás publicidad no personalizada y la aplicación funcionará exactamente igual: no hay ninguna función bloqueada.</p>
+
+<h2>Permisos que pide la aplicación</h2>
+<table>
+  <tr><th>Permiso</th><th>Para qué</th></tr>
+  <tr><td>Notificaciones</td><td>Los recordatorios, los avisos de objetivo y logros, y la notificación opcional de progreso.</td></tr>
+  <tr><td>Alarmas exactas (opcional)</td><td>Que los recordatorios lleguen a su hora exacta.</td></tr>
+  <tr><td>Notificaciones a pantalla completa (opcional)</td><td>Enseñar el recordatorio encima de la pantalla de bloqueo, con los botones «He bebido» y «Ahora no puedo». Se puede apagar en Ajustes → Recordatorios.</td></tr>
+  <tr><td>Iniciar al encender</td><td>Volver a programar los recordatorios después de reiniciar el teléfono.</td></tr>
+  <tr><td>Ubicación aproximada (opcional)</td><td>El tiempo del día, solo si activas «Ajustar al calor» y solo con la app abierta.</td></tr>
+  <tr><td>Health Connect (opcional)</td><td>Escribir la hidratación y la nutrición; leer la hidratación de otras apps y los minutos de ejercicio.</td></tr>
+  <tr><td>Internet</td><td>El tiempo y la publicidad.</td></tr>
+  <tr><td>Identificador de publicidad</td><td>La publicidad (ver arriba).</td></tr>
+</table>
+
+<h2>Terceros implicados</h2>
+<table>
+  <tr><th>Servicio</th><th>Para qué</th><th>Su política</th></tr>
+  <tr>
+    <td>MET Norway (api.met.no)</td>
+    <td>La previsión del tiempo, solo si activas el ajuste al calor</td>
+    <td><a href="https://api.met.no/doc/TermsOfService">api.met.no/doc/TermsOfService</a></td>
+  </tr>
+  <tr>
+    <td>Google AdMob</td>
+    <td>Publicidad y formulario de consentimiento</td>
+    <td><a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></td>
+  </tr>
+  <tr>
+    <td>Geocodificador de Android (normalmente Google)</td>
+    <td>Buscar una ciudad y poner nombre a tu ubicación, solo con el ajuste al calor</td>
+    <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+  </tr>
+</table>
+<p>Los datos del tiempo proceden de MET Norway y se publican con licencia <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Esta aplicación no está afiliada a MET Norway.</p>
+
+<h2>Base legal y conservación</h2>
+<p>Los datos de hidratación y de salud se tratan <strong>únicamente en tu dispositivo</strong> y bajo tu control, con tu consentimiento explícito al introducirlos: no hay comunicación a terceros y no existe ninguna copia en poder del responsable. El uso de la ubicación y de Health Connect se basa en tu consentimiento al conceder esos permisos, revocable en cualquier momento. En el caso de la publicidad personalizada, la base legal es tu <strong>consentimiento</strong>, recogido mediante el formulario de Google (UMP) y revocable desde los ajustes de la aplicación.</p>
+<p>Todo lo que guarda la aplicación permanece hasta que lo borres, la desinstales o borres sus datos.</p>
+
+<h2>Tus derechos</h2>
+<p>Si resides en la Unión Europea, el RGPD te reconoce los derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición. En la práctica, y dado que esta aplicación no guarda ningún dato asociado a tu persona fuera de tu teléfono:</p>
+<ul>
+  <li><strong>Acceso y portabilidad:</strong> Ajustes → Datos y copia de seguridad → Exportar a CSV o Crear una copia.</li>
+  <li><strong>Rectificación:</strong> puedes editar o borrar cualquier vaso, y cambiar tu perfil en los ajustes.</li>
+  <li><strong>Supresión:</strong> Ajustes → Datos y copia de seguridad → Borrar todos los datos, o desinstalar la aplicación. El identificador de publicidad se reinicia o se borra desde <em>Ajustes de Android → Google → Anuncios</em>.</li>
+  <li><strong>Oposición y retirada del consentimiento:</strong> Ajustes → Opciones de privacidad de los anuncios; y los permisos de ubicación y de Health Connect, desde los ajustes de Android o de Health Connect.</li>
+</ul>
+<p>Los datos que recoge la biblioteca de Google los gestiona Google, y los derechos sobre ellos se ejercen ante Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. También puedes reclamar ante la autoridad de control de tu país. En España es la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
+
+<h2>Menores</h2>
+<p>Esta aplicación no está dirigida a menores de 13 años y no recoge conscientemente datos de ellos. Si se usa para calcular el objetivo de un niño, debe hacerlo un adulto responsable.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si esta política cambia de forma sustancial, se publicará la versión nueva en esta misma dirección con una fecha de actualización distinta.</p>
+
+<h2>Advertencia importante sobre el servicio</h2>
+<p>Esta aplicación <strong>no es un producto sanitario</strong>: da orientaciones generales y no diagnostica ni trata nada. Si tienes una enfermedad del riñón, del corazón o del hígado, o tu médico te ha limitado los líquidos, sigue sus indicaciones antes que las de la app. Beber mucha agua muy deprisa puede ser peligroso.</p>
+
+<footer>
+<p>Plic · JR Soft (Javier Román Sáez) · <code>com.jrsoft.beberagua</code> · Contacto: <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong> · <a href="privacy-en.html">English</a></p>
+</footer>
+</body>
+</html>

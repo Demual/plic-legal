@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plic · Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 5rem;
+    color: #1a1c1e; background: #f3f9fe;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #dfe3e8; background: #0d1520; }
+    td, th { border-color: #333 !important; }
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin-bottom: .25rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.5rem; color: #1063c9; }
+  h3 { font-size: 1.05rem; margin-top: 1.75rem; }
+  @media (prefers-color-scheme: dark) { h2 { color: #7cc4ff; } }
+  .date { opacity: .7; font-size: .9rem; }
+  .key { border-left: 4px solid #1e88e5; padding: .5rem 0 .5rem 1rem; margin: 1.5rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  th { font-weight: 600; }
+  code { background: rgba(127,127,127,.15); padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
+  footer { margin-top: 3rem; font-size: .9rem; opacity: .75; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="date"><strong>Plic</strong> app (<code>com.jrsoft.beberagua</code>) · Last updated: October 1, 2026</p>
+
+<div class="key">
+<p><strong>In one sentence:</strong> this app has no user accounts, and
+<strong>what you drink and your profile never leave your phone</strong>. They are not
+sent to any server, to advertising or to any analytics.</p>
+</div>
+
+<h2>Who is responsible</h2>
+<p>The data controller is <strong>JR Soft</strong>, the trade name of <strong>Javier Román Sáez</strong>, the developer of the app. Contact: <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong>.</p>
+
+<h2>What this app does NOT do</h2>
+<ul>
+  <li>There is no sign-up, account, username or password. The name you can type for greetings is optional and never leaves the phone.</li>
+  <li>There are no analytics or crash-reporting tools: no Google Analytics, no Crashlytics, nothing similar. The only library that sends its own data to a third party is the advertising one, explained below. The app includes Firebase's remote configuration library (<em>Remote Config</em>), which could adjust advertising without releasing a new version, but it is <strong>switched off</strong>: it does not start or connect to any server. If it is ever switched on, this policy will be updated first.</li>
+  <li>No data is sold, rented or shared with third parties for commercial purposes.</li>
+  <li><strong>What you drink, your weight, age, sex, and whether you are pregnant or breastfeeding are never sent anywhere.</strong> They are health-related data and stay in the app's private storage. Your daily goal is calculated on the phone.</li>
+  <li>GPS is never used in the background and your location is not tracked. Approximate location is only used if you turn on weather adjustment, and only while the app is open (see below).</li>
+</ul>
+
+<h2>Data that stays on your phone only</h2>
+<p>This information is kept in the app's private storage and never leaves it. It is completely removed if you uninstall the app or clear its data in Android settings (or with «Delete all data» inside the app).</p>
+<ul>
+  <li><strong>Your profile</strong>: sex, weight, age, physical activity, usual climate, pregnancy or breastfeeding, and the optional name.</li>
+  <li><strong>What you drink</strong>: each drink with its time, beverage, amount and what it provides (hydration, caffeine, sugar, calories and alcohol).</li>
+  <li>Your daily goals, cups, custom drinks, achievements and challenges.</li>
+  <li>Your settings: schedule, reminders, theme, units and language.</li>
+  <li>If you turn on weather adjustment: the chosen place (rounded to about 1 km) and the day's forecast.</li>
+</ul>
+
+<h3>Backups and exports</h3>
+<p>If Android backup is on, the system keeps an encrypted copy of the app's data in your Google account, as it does for other apps; Google manages it and you control it in Android settings. The files the app creates (backup, CSV and PDF report) are only saved or shared where you choose.</p>
+
+<h2>Data that does leave the phone</h2>
+
+<h3>Weather (optional): MET Norway</h3>
+<p>If you turn on «Adjust to the heat», the app requests the day's forecast from the public service of the Norwegian Meteorological Institute (<strong>MET Norway</strong>, <code>api.met.no</code>) to add water on hot days. The request contains <strong>coordinates rounded to two decimals</strong> (roughly one kilometre of precision) and an identifier of the app and its version (the <em>User-Agent</em> that service requires). None of your personal data or what you drink is included.</p>
+<p>The coordinates come from one of two sources, whichever you choose:</p>
+<ul>
+  <li><strong>The phone's approximate location</strong>, with the approximate location permission (<code>ACCESS_COARSE_LOCATION</code>), which is only requested if you turn this option on and only used while the app is open. Never in the background.</li>
+  <li><strong>A city you search for.</strong> The search uses Android's own geocoding service (provided by Google on most phones), which receives the text you type; and, to name the place of your location, the rounded coordinates.</li>
+</ul>
+
+<h3>Health Connect (optional)</h3>
+<p>Health Connect is Android's health data store: it lives on your phone and shares data between apps only with the permissions you grant. If you enable them, the app can:</p>
+<ul>
+  <li><strong>Write</strong> each drink as «hydration» and, if it contains caffeine, sugar or calories, as «nutrition».</li>
+  <li><strong>Read</strong> the hydration logged by other apps (to import it without duplicates) and today's exercise minutes (to add water to your goal).</li>
+</ul>
+<p>Data read from Health Connect is only used for those features, stays on the phone, is never sent to any server and is <strong>never used for advertising</strong>. The use of information received from Health Connect adheres to the Health Connect Permissions policy, including the Limited Use requirements. You can revoke the permissions at any time in Health Connect.</p>
+
+<h3>IP address</h3>
+<p>As with any app that connects to the internet, the servers the app talks to receive your IP address: MET Norway (if you use weather) and Google (advertising and city search). This app has no servers of its own and keeps no logs.</p>
+
+<h3>Advertising: Google AdMob</h3>
+<p>The app shows unobtrusive advertising, served by Google's advertising SDK (AdMob): a banner at the bottom of the history and achievements screens, and native ads (labelled “Ad”) at the end of the Today screen and of a day's details, and in the list of challenges. There are never full-screen ads, and no ads in the welcome screens, settings, the hydration guide, notifications or the widget. That is why it declares the <code>com.google.android.gms.permission.AD_ID</code> permission, which gives access to Android's advertising ID; you can reset or delete this ID in <em>Android Settings → Google → Ads</em>.</p>
+<p>Besides the advertising ID, the AdMob SDK collects the app set ID, interactions with the app and the ads, and diagnostic data (launch time, crashes and energy use). Google may use your IP address to estimate an approximate location, at the level of a city. Google uses this data to serve and measure advertising, for analytics and to prevent fraud, under its own policy.</p>
+<p>In the European Economic Area, the United Kingdom and wherever the law requires it, the app shows Google's consent form (UMP) before serving personalised ads. You can change your choice at any time in Settings → Privacy options for ads.</p>
+<p><strong>Your hydration and health data never reach advertising.</strong> Ad requests are sent without any data about what you drink or your profile. If you refuse consent, you will see non-personalised ads and the app works exactly the same: no feature is locked.</p>
+
+<h2>Permissions the app requests</h2>
+<table>
+  <tr><th>Permission</th><th>What for</th></tr>
+  <tr><td>Notifications</td><td>Reminders, goal and achievement notices, and the optional progress notification.</td></tr>
+  <tr><td>Exact alarms (optional)</td><td>So that reminders arrive at their exact time.</td></tr>
+  <tr><td>Full-screen notifications (optional)</td><td>Showing the reminder over the lock screen, with the “I drank” and “I can’t right now” buttons. You can turn it off in Settings → Reminders.</td></tr>
+  <tr><td>Run at startup</td><td>Rescheduling reminders after the phone restarts.</td></tr>
+  <tr><td>Approximate location (optional)</td><td>The day's weather, only if you turn on «Adjust to the heat» and only while the app is open.</td></tr>
+  <tr><td>Health Connect (optional)</td><td>Writing hydration and nutrition; reading other apps' hydration and exercise minutes.</td></tr>
+  <tr><td>Internet</td><td>Weather and advertising.</td></tr>
+  <tr><td>Advertising ID</td><td>Advertising (see above).</td></tr>
+</table>
+
+<h2>Third parties involved</h2>
+<table>
+  <tr><th>Service</th><th>What for</th><th>Their policy</th></tr>
+  <tr>
+    <td>MET Norway (api.met.no)</td>
+    <td>The weather forecast, only if you turn on heat adjustment</td>
+    <td><a href="https://api.met.no/doc/TermsOfService">api.met.no/doc/TermsOfService</a></td>
+  </tr>
+  <tr>
+    <td>Google AdMob</td>
+    <td>Advertising and consent form</td>
+    <td><a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></td>
+  </tr>
+  <tr>
+    <td>Android geocoder (usually Google)</td>
+    <td>Searching for a city and naming your location, only with heat adjustment</td>
+    <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+  </tr>
+</table>
+<p>Weather data comes from MET Norway and is published under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> licence. This app is not affiliated with MET Norway.</p>
+
+<h2>Legal basis and retention</h2>
+<p>Hydration and health data are processed <strong>only on your device</strong> and under your control, with your explicit consent when you enter them: they are not shared with third parties and the controller holds no copy. The use of location and Health Connect is based on your consent when granting those permissions, which you can revoke at any time. For personalised advertising, the legal basis is your <strong>consent</strong>, collected with Google's form (UMP) and revocable from the app's settings.</p>
+<p>Everything the app stores remains until you delete it, uninstall the app or clear its data.</p>
+
+<h2>Your rights</h2>
+<p>If you live in the European Union, the GDPR grants you the rights of access, rectification, erasure, restriction, portability and objection. In practice, since this app keeps no data linked to you outside your phone:</p>
+<ul>
+  <li><strong>Access and portability:</strong> Settings → Data and backup → Export to CSV or Create a backup.</li>
+  <li><strong>Rectification:</strong> you can edit or delete any drink and change your profile in settings.</li>
+  <li><strong>Erasure:</strong> Settings → Data and backup → Delete all data, or uninstall the app. The advertising ID can be reset or deleted in <em>Android Settings → Google → Ads</em>.</li>
+  <li><strong>Objection and withdrawal of consent:</strong> Settings → Privacy options for ads; and the location and Health Connect permissions, in Android or Health Connect settings.</li>
+</ul>
+<p>Data collected by Google's library is managed by Google, and rights over it are exercised with Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. You can also complain to the supervisory authority of your country (in Spain, the <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>).</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and does not knowingly collect data from them. If it is used to calculate a child's goal, a responsible adult should do it.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes substantially, the new version will be published at this same address with a new update date.</p>
+
+<h2>Important notice about the service</h2>
+<p>This app <strong>is not a medical device</strong>: it gives general guidance and does not diagnose or treat anything. If you have kidney, heart or liver disease, or your doctor has limited your fluids, follow their advice rather than the app's. Drinking a lot of water very quickly can be dangerous.</p>
+
+<footer>
+<p>Plic · JR Soft (Javier Román Sáez) · <code>com.jrsoft.beberagua</code> · Contact: <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong> · <a href="privacidad-es.html">Español</a></p>
+</footer>
+</body>
+</html>
