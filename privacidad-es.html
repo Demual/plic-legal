@@ -31,12 +31,13 @@
 <body>
 
 <h1>Política de privacidad</h1>
-<p class="fecha">Aplicación <strong>Plic</strong> (<code>com.jrsoft.beberagua</code>) · Última actualización: 1 de octubre de 2026</p>
+<p class="fecha">Aplicación <strong>Plic</strong> (<code>com.jrsoft.beberagua</code>) · Última actualización: 14 de octubre de 2026</p>
 
 <div class="clave">
 <p><strong>En una frase:</strong> esta aplicación no tiene cuentas de usuario y
-<strong>lo que bebes y tu perfil no salen de tu teléfono</strong>. No se envían a
-ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
+<strong>lo que bebes y tu perfil no salen de tu teléfono</strong> (salvo que tú los
+pases a un móvil nuevo). No se envían a ningún servidor, ni a la publicidad, ni a
+ninguna analítica.</p>
 </div>
 
 <h2>Quién es el responsable</h2>
@@ -45,7 +46,7 @@ ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
 <h2>Lo que esta aplicación NO hace</h2>
 <ul>
   <li>No hay registro, cuenta, usuario ni contraseña. El nombre que puedes escribir para los saludos es opcional y no sale del teléfono.</li>
-  <li>No hay ninguna herramienta de analítica ni de informes de fallos: ni Google Analytics, ni Crashlytics, ni similares. La única biblioteca que envía datos propios a un tercero es la de la publicidad; se explica abajo. La aplicación incluye la biblioteca de configuración remota de Firebase (<em>Remote Config</em>), que serviría para ajustar la publicidad sin publicar una versión nueva, pero <strong>está desactivada</strong>: no arranca ni se conecta a ningún servidor. Si algún día se activa, esta política se actualizará antes.</li>
+  <li>No hay ninguna herramienta propia de analítica ni de informes de fallos: ni Google Analytics, ni Crashlytics, ni similares. La única biblioteca que envía datos propios a un tercero es la de la publicidad; se explica abajo. La aplicación incluye la biblioteca de configuración remota de Firebase (<em>Remote Config</em>), que serviría para ajustar la publicidad sin publicar una versión nueva, pero <strong>está desactivada</strong>: no arranca ni se conecta a ningún servidor. Si algún día se activa, esta política se actualizará antes.</li>
   <li>No se venden, alquilan ni ceden datos a terceros con fines comerciales.</li>
   <li><strong>Lo que bebes, tu peso, tu edad, tu sexo y si estás embarazada o en lactancia no se envían a ningún sitio.</strong> Son datos relacionados con la salud y se quedan en el almacenamiento privado de la aplicación. El objetivo diario se calcula dentro del teléfono.</li>
   <li>No se usa el GPS en segundo plano ni se sigue tu ubicación. La ubicación aproximada solo se usa si activas el ajuste al tiempo, y solo con la aplicación abierta (ver abajo).</li>
@@ -59,36 +60,43 @@ ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
   <li>Tus objetivos de cada día, vasos, bebidas propias, logros y retos.</li>
   <li>Tus ajustes: horario, recordatorios, tema, unidades e idioma.</li>
   <li>Si activas el ajuste al tiempo: el lugar elegido (redondeado a unos 1 km) y la previsión del día.</li>
+  <li>El país de tu tarjeta SIM (o, si no hay, el de la región del sistema), que la pantalla «Más apps de JR Soft» consulta en el momento para enseñar solo las apps disponibles en tu país. No se guarda ni se envía. Los enlaces a Google Play de esa pantalla llevan una etiqueta que dice que vienen de esta aplicación, sin ningún dato tuyo.</li>
 </ul>
 
-<h3>Copias de seguridad y exportaciones</h3>
-<p>Si tienes activada la copia de seguridad de Android, el sistema guarda una copia cifrada de los datos de la app en tu cuenta de Google, como hace con el resto de apps; la gestiona Google y la controlas desde los ajustes de Android. Los ficheros que crea la app (copia de seguridad, CSV e informe PDF) solo se guardan o se comparten donde tú elijas.</p>
+<h3>Copias de seguridad, cambio de móvil y exportaciones</h3>
+<p>La copia de seguridad de Android en la nube (la de tu cuenta de Google) está desactivada para los datos de esta app: <strong>no se sube ninguno</strong>. Android sí guarda en tu cuenta la lista de las apps que tenías instaladas, para volver a instalarlas, pero esa lista la gestiona Google y no lleva datos de la app.</p>
+<p>Si al configurar un móvil nuevo copias tus datos directamente desde el antiguo, con cable o sin él, los datos de la app (tu historial de lo que bebes, tu perfil y tus ajustes) pueden pasar al móvil nuevo. Ese traspaso lo pides tú y lo hace Android, con su herramienta o con la del fabricante del móvil y con sus propias condiciones. Según la documentación de Android, va de un móvil a otro sin pasar por servidores. En ningún caso pasa por los nuestros: JR Soft no recibe nada. Lo que la app escribe en Salud conectada (Health Connect) lo guarda Salud conectada, no la app; si pasa al móvil nuevo, lo decide Android.</p>
+<p>Que se haga depende de la versión de Android y del fabricante (en Android 8 o anterior no se hace), así que no podemos garantizarlo. Si configuras el móvil nuevo desde la copia de tu cuenta de Google, sin el antiguo, los datos de esta app no vuelven, porque no están en esa copia.</p>
+<p>No se traspasa lo que solo sirve en el móvil antiguo, como las alarmas programadas, la previsión del tiempo guardada o tu elección sobre los anuncios: en el móvil nuevo la app te la volverá a pedir.</p>
+<p>Los ficheros que crea la app (copia de seguridad, CSV e informe PDF) solo se guardan o se comparten donde tú elijas.</p>
 
 <h2>Datos que sí salen del teléfono</h2>
 
 <h3>El tiempo (opcional): MET Norway</h3>
-<p>Si activas «Ajustar al calor», la aplicación consulta la previsión del día al servicio público del Instituto Meteorológico de Noruega (<strong>MET Norway</strong>, <code>api.met.no</code>) para sumar agua los días de calor. En la petición viajan unas <strong>coordenadas redondeadas a dos decimales</strong> (con un margen de un kilómetro, más o menos) y un identificador de la aplicación y su versión (el <em>User-Agent</em> que ese servicio exige). No viaja ningún dato tuyo ni lo que bebes.</p>
+<p>Si activas «Ajustar al calor», la aplicación consulta la previsión del día del Instituto Meteorológico de Noruega (<strong>MET Norway</strong>) para sumar agua los días de calor. No se la pide directamente a MET Norway, como piden sus condiciones: se la pide al <strong>servidor intermedio de JR Soft</strong> (<code>aire-sin-sustos.pages.dev</code>, la web de datos que comparte con la app Aire sin sustos, alojada en Cloudflare Pages), que la pide a MET Norway y guarda la previsión de cada punto hasta un día después de que caduque, la misma para todos. En la petición viajan unas <strong>coordenadas redondeadas a dos decimales</strong> (con un margen de un kilómetro, más o menos) y un identificador de la aplicación con un correo de contacto (el <em>User-Agent</em>). No viaja ningún dato tuyo ni lo que bebes. MET Norway solo ve el servidor, nunca tu dirección IP. El servidor no guarda registros de quién pregunta: para frenar abusos, solo cuenta durante un minuto las peticiones de cada dirección IP, guardada como un resumen criptográfico que no permite recuperarla y que se borra solo a los dos minutos. Las versiones anteriores a la 1.0.4 pedían el tiempo directamente a MET Norway, que, según sus condiciones, guarda en sus registros, en su centro de datos de Oslo, la dirección IP y las coordenadas de cada petición.</p>
+<p>La previsión se pide con la aplicación abierta o cuando cambias el lugar o el ajuste y, para que el objetivo del día tenga en cuenta el calor aunque no abras la app, <strong>como mucho una vez al día en segundo plano</strong>, al empezar el día y con el último lugar guardado (sin mirar tu ubicación). No se vuelve a pedir mientras la guardada siga vigente y, si el servidor no responde, se usa la guardada, sin reintentos. La app te dice de cuándo es (Ajustes → Tiempo y ejercicio).</p>
 <p>Las coordenadas salen de una de estas dos fuentes, la que elijas:</p>
 <ul>
   <li><strong>La ubicación aproximada del teléfono</strong>, con el permiso de ubicación aproximada (<code>ACCESS_COARSE_LOCATION</code>), que solo se pide si activas esta opción y solo se usa con la aplicación abierta. Nunca en segundo plano.</li>
   <li><strong>Una ciudad que buscas a mano.</strong> La búsqueda usa el servicio de geocodificación del propio Android (en la mayoría de teléfonos lo presta Google), que recibe el texto que escribes; y para poner nombre al lugar de tu ubicación, las coordenadas redondeadas.</li>
 </ul>
 
-<h3>Health Connect (opcional)</h3>
-<p>Health Connect es el almacén de datos de salud de Android: está en tu teléfono y comparte datos entre apps solo con los permisos que tú das. Si los activas, la aplicación puede:</p>
+<h3>Salud conectada (opcional)</h3>
+<p>Salud conectada es el almacén de datos de salud de Android: está en tu teléfono y comparte datos entre apps solo con los permisos que tú das. Si los activas, la aplicación puede:</p>
 <ul>
   <li><strong>Escribir</strong> cada vaso como «hidratación» y, si lleva cafeína, azúcar o calorías, como «nutrición».</li>
   <li><strong>Leer</strong> la hidratación que apunten otras apps (para importarla sin duplicados) y los minutos de ejercicio del día (para sumar agua a tu objetivo).</li>
 </ul>
-<p>Los datos leídos de Health Connect se usan solo para esas funciones, se quedan en el teléfono, no se envían a ningún servidor y <strong>nunca se usan para publicidad</strong>. El uso de la información recibida de Health Connect cumple la política de permisos de Health Connect, incluidos los requisitos de uso limitado (<em>Limited Use</em>). Puedes retirar los permisos cuando quieras en Health Connect.</p>
+<p>Los datos leídos de Salud conectada se usan solo para esas funciones, se quedan en el teléfono, no se envían a ningún servidor y <strong>nunca se usan para publicidad</strong>. El uso de la información recibida de Salud conectada cumple la política de permisos de Salud conectada, incluidos los requisitos de uso limitado (<em>Limited Use</em>). Puedes retirar los permisos cuando quieras en Salud conectada.</p>
 
 <h3>Dirección IP</h3>
-<p>Como en cualquier aplicación que se conecta a internet, los servidores con los que habla la app reciben tu dirección IP: MET Norway (si usas el tiempo) y Google (publicidad y búsqueda de ciudades). Esta aplicación no tiene servidores propios y no guarda ningún registro.</p>
+<p>Como en cualquier aplicación que se conecta a internet, los servidores con los que habla la app reciben tu dirección IP: el servidor intermedio del tiempo en Cloudflare (si usas el tiempo) y Google (publicidad y búsqueda de ciudades). El servidor del tiempo no guarda registros de quién pregunta (solo el recuento contra abusos explicado arriba), y MET Norway no recibe la tuya.</p>
 
 <h3>Publicidad: Google AdMob</h3>
 <p>La aplicación muestra publicidad discreta, servida por el SDK de publicidad de Google (AdMob): un banner al pie del historial y de los logros, y anuncios nativos (con la etiqueta «Anuncio») al final de la pantalla «Hoy» y del detalle de un día, y en la lista de retos. Nunca hay anuncios a pantalla completa, ni en la bienvenida, los ajustes, la guía de hidratación, las notificaciones o el widget. Por eso declara el permiso <code>com.google.android.gms.permission.AD_ID</code>, que da acceso al identificador de publicidad de Android; este identificador es reiniciable y borrable desde <em>Ajustes de Android → Google → Anuncios</em>.</p>
 <p>Además del identificador de publicidad, el SDK de AdMob recoge el identificador del conjunto de aplicaciones (<em>app set ID</em>), las interacciones con la aplicación y con los anuncios, y datos de diagnóstico (tiempo de arranque, bloqueos y consumo de energía). Google puede usar tu dirección IP para estimar una ubicación aproximada, del orden de una ciudad. Google usa estos datos para servir y medir la publicidad, para estadísticas y para prevenir fraudes, según su propia política.</p>
-<p>En el Espacio Económico Europeo, el Reino Unido y donde la ley lo pida, la aplicación muestra el formulario de consentimiento de Google (UMP) antes de servir publicidad personalizada. Puedes cambiar tu elección cuando quieras desde Ajustes → Opciones de privacidad de los anuncios.</p>
+<p>En el Espacio Económico Europeo, el Reino Unido y Suiza, y donde la ley lo pida, la aplicación muestra el formulario de consentimiento de Google (UMP) antes de servir publicidad personalizada. Puedes cambiar tu elección cuando quieras desde Ajustes → Opciones de privacidad de los anuncios.</p>
+<p>El mensaje de consentimiento de los anuncios lo muestra Google con un texto común a todos sus socios publicitarios, y por eso menciona la geolocalización precisa. Según Google, su SDK de anuncios solo usa la ubicación aproximada que se deduce de la dirección IP, y esta app no le pasa la ubicación del GPS. Puedes rechazar ese uso en «Gestionar opciones».</p>
 <p><strong>Tus datos de hidratación y de salud nunca llegan a la publicidad.</strong> La petición de anuncio sale sin ningún dato de lo que bebes ni de tu perfil. Si rechazas el consentimiento, verás publicidad no personalizada y la aplicación funcionará exactamente igual: no hay ninguna función bloqueada.</p>
 
 <h2>Permisos que pide la aplicación</h2>
@@ -99,7 +107,7 @@ ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
   <tr><td>Notificaciones a pantalla completa (opcional)</td><td>Enseñar el recordatorio encima de la pantalla de bloqueo, con los botones «He bebido» y «Ahora no puedo». Se puede apagar en Ajustes → Recordatorios.</td></tr>
   <tr><td>Iniciar al encender</td><td>Volver a programar los recordatorios después de reiniciar el teléfono.</td></tr>
   <tr><td>Ubicación aproximada (opcional)</td><td>El tiempo del día, solo si activas «Ajustar al calor» y solo con la app abierta.</td></tr>
-  <tr><td>Health Connect (opcional)</td><td>Escribir la hidratación y la nutrición; leer la hidratación de otras apps y los minutos de ejercicio.</td></tr>
+  <tr><td>Salud conectada (opcional)</td><td>Escribir la hidratación y la nutrición; leer la hidratación de otras apps y los minutos de ejercicio.</td></tr>
   <tr><td>Internet</td><td>El tiempo y la publicidad.</td></tr>
   <tr><td>Identificador de publicidad</td><td>La publicidad (ver arriba).</td></tr>
 </table>
@@ -108,8 +116,13 @@ ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
 <table>
   <tr><th>Servicio</th><th>Para qué</th><th>Su política</th></tr>
   <tr>
+    <td>Servidor intermedio de JR Soft en Cloudflare Pages (aire-sin-sustos.pages.dev)</td>
+    <td>Pedir la previsión del tiempo a MET Norway, solo si activas el ajuste al calor</td>
+    <td><a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></td>
+  </tr>
+  <tr>
     <td>MET Norway (api.met.no)</td>
-    <td>La previsión del tiempo, solo si activas el ajuste al calor</td>
+    <td>La previsión del tiempo (la recibe el servidor intermedio, no la app)</td>
     <td><a href="https://api.met.no/doc/TermsOfService">api.met.no/doc/TermsOfService</a></td>
   </tr>
   <tr>
@@ -125,8 +138,11 @@ ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
 </table>
 <p>Los datos del tiempo proceden de MET Norway y se publican con licencia <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Esta aplicación no está afiliada a MET Norway.</p>
 
+<h2>Transferencias fuera de Europa</h2>
+<p>Google (AdMob y el geocodificador de Android) puede tratar datos fuera del Espacio Económico Europeo. Google LLC está adherida al Marco de Privacidad de Datos UE-EE. UU. (<em>Data Privacy Framework</em>), a su extensión para el Reino Unido y al marco Suiza-EE. UU. El servidor intermedio del tiempo está en Cloudflare, Inc. (EE. UU.), que también está adherida a esos tres marcos. MET Norway está en Noruega, dentro del EEE.</p>
+
 <h2>Base legal y conservación</h2>
-<p>Los datos de hidratación y de salud se tratan <strong>únicamente en tu dispositivo</strong> y bajo tu control, con tu consentimiento explícito al introducirlos: no hay comunicación a terceros y no existe ninguna copia en poder del responsable. El uso de la ubicación y de Health Connect se basa en tu consentimiento al conceder esos permisos, revocable en cualquier momento. En el caso de la publicidad personalizada, la base legal es tu <strong>consentimiento</strong>, recogido mediante el formulario de Google (UMP) y revocable desde los ajustes de la aplicación.</p>
+<p>Los datos de hidratación y de salud se tratan <strong>únicamente en tu dispositivo</strong> y bajo tu control, con tu consentimiento explícito al introducirlos: no hay comunicación a terceros y no existe ninguna copia en poder del responsable. El uso de la ubicación y de Salud conectada se basa en tu consentimiento al conceder esos permisos, revocable en cualquier momento. En el caso de la publicidad personalizada, la base legal es tu <strong>consentimiento</strong>, recogido mediante el formulario de Google (UMP) y revocable desde los ajustes de la aplicación. El traspaso entre móviles lo haces tú con una función de Android y no nos llega ningún dato. El recuento contra abusos del servidor del tiempo se basa en el interés legítimo de proteger el servicio (RGPD, art. 6.1.f).</p>
 <p>Todo lo que guarda la aplicación permanece hasta que lo borres, la desinstales o borres sus datos.</p>
 
 <h2>Tus derechos</h2>
@@ -135,21 +151,21 @@ ningún servidor, ni a la publicidad, ni a ninguna analítica.</p>
   <li><strong>Acceso y portabilidad:</strong> Ajustes → Datos y copia de seguridad → Exportar a CSV o Crear una copia.</li>
   <li><strong>Rectificación:</strong> puedes editar o borrar cualquier vaso, y cambiar tu perfil en los ajustes.</li>
   <li><strong>Supresión:</strong> Ajustes → Datos y copia de seguridad → Borrar todos los datos, o desinstalar la aplicación. El identificador de publicidad se reinicia o se borra desde <em>Ajustes de Android → Google → Anuncios</em>.</li>
-  <li><strong>Oposición y retirada del consentimiento:</strong> Ajustes → Opciones de privacidad de los anuncios; y los permisos de ubicación y de Health Connect, desde los ajustes de Android o de Health Connect.</li>
+  <li><strong>Oposición y retirada del consentimiento:</strong> Ajustes → Opciones de privacidad de los anuncios; y los permisos de ubicación y de Salud conectada, desde los ajustes de Android o de Salud conectada.</li>
 </ul>
-<p>Los datos que recoge la biblioteca de Google los gestiona Google, y los derechos sobre ellos se ejercen ante Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. También puedes reclamar ante la autoridad de control de tu país. En España es la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
+<p>Los datos que recoge la biblioteca de Google los gestiona Google, y los derechos sobre ellos se ejercen ante Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. También puedes reclamar ante la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a> o ante la autoridad de protección de datos de tu país (RGPD, art. 77).</p>
 
 <h2>Menores</h2>
-<p>Esta aplicación no está dirigida a menores de 13 años y no recoge conscientemente datos de ellos. Si se usa para calcular el objetivo de un niño, debe hacerlo un adulto responsable.</p>
+<p>Esta aplicación no está dirigida a menores de 16 años y no recoge conscientemente datos de ellos. Si se usa para calcular el objetivo de un niño, debe hacerlo un adulto responsable.</p>
 
 <h2>Cambios en esta política</h2>
 <p>Si esta política cambia de forma sustancial, se publicará la versión nueva en esta misma dirección con una fecha de actualización distinta.</p>
 
 <h2>Advertencia importante sobre el servicio</h2>
-<p>Esta aplicación <strong>no es un producto sanitario</strong>: da orientaciones generales y no diagnostica ni trata nada. Si tienes una enfermedad del riñón, del corazón o del hígado, o tu médico te ha limitado los líquidos, sigue sus indicaciones antes que las de la app. Beber mucha agua muy deprisa puede ser peligroso.</p>
+<p>Esta aplicación <strong>no es un producto sanitario</strong>: da orientaciones generales y no diagnostica, trata, cura ni previene ninguna enfermedad. Para cualquier consejo médico, consulta a un profesional sanitario. Si tienes una enfermedad del riñón, del corazón o del hígado, o tu médico te ha limitado los líquidos, sigue sus indicaciones antes que las de la app. Beber mucha agua muy deprisa puede ser peligroso.</p>
 
 <footer>
-<p>Plic · JR Soft (Javier Román Sáez) · <code>com.jrsoft.beberagua</code> · Contacto: <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong> · <a href="privacy-en.html">English</a></p>
+<p>Plic · JR Soft (Javier Román Sáez) · <code>com.jrsoft.beberagua</code> · Contacto: <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong> · <a href="index.html#todos">Otros idiomas</a></p>
 </footer>
 </body>
 </html>

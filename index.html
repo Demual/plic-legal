@@ -5,20 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plic · Privacy · Privacidad</title>
 <script>
-  // En español, la política en español; en cualquier otro idioma, en inglés.
+  // A la versión del idioma del navegador; inglés para el resto. Las
+  // traducciones dicen que, si hay diferencias, prevalece la española.
+  // Con #todos (el enlace «Otros idiomas» del pie de cada política) no
+  // redirige y enseña la lista.
   (function () {
-    var lang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
-    location.replace(lang.toLowerCase().indexOf('es') === 0 ? 'privacidad-es.html' : 'privacy-en.html');
+    if (location.hash === '#todos') return;
+    var l = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+    var paginas = {
+      es: 'privacidad-es.html', ca: 'privacy-ca.html', de: 'privacy-de.html',
+      fr: 'privacy-fr.html', it: 'privacy-it.html', nl: 'privacy-nl.html',
+      pl: 'privacy-pl.html', sv: 'privacy-sv.html', pt: 'privacy-pt.html'
+    };
+    // El portugués de Brasil no tiene versión propia: la de Portugal le sirve
+    // mejor que la inglesa.
+    location.replace(paginas[l.split('-')[0]] || 'privacy-en.html');
   })();
 </script>
 <style>
   :root { color-scheme: light dark; }
   body { font: 17px/1.6 system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1.25rem; }
+  a { display: block; padding: .5rem 0; }
 </style>
 </head>
 <body>
 <h1>Plic</h1>
-<p><a href="privacy-en.html">Privacy Policy (English)</a></p>
-<p><a href="privacidad-es.html">Política de privacidad (español)</a></p>
+<a href="privacidad-es.html">Política de privacidad (español)</a>
+<a href="privacy-en.html">Privacy policy (English)</a>
+<a href="privacy-ca.html">Política de privadesa (català)</a>
+<a href="privacy-de.html">Datenschutzerklärung (Deutsch)</a>
+<a href="privacy-fr.html">Politique de confidentialité (français)</a>
+<a href="privacy-it.html">Informativa sulla privacy (italiano)</a>
+<a href="privacy-nl.html">Privacybeleid (Nederlands)</a>
+<a href="privacy-pl.html">Polityka prywatności (polski)</a>
+<a href="privacy-pt.html">Política de privacidade (português)</a>
+<a href="privacy-sv.html">Integritetspolicy (svenska)</a>
 </body>
 </html>

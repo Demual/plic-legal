@@ -31,12 +31,13 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="date"><strong>Plic</strong> app (<code>com.jrsoft.beberagua</code>) · Last updated: October 1, 2026</p>
+<p class="date"><strong>Plic</strong> app (<code>com.jrsoft.beberagua</code>) · Last updated: October 14, 2026</p>
 
 <div class="key">
 <p><strong>In one sentence:</strong> this app has no user accounts, and
-<strong>what you drink and your profile never leave your phone</strong>. They are not
-sent to any server, to advertising or to any analytics.</p>
+<strong>what you drink and your profile never leave your phone</strong> (unless you
+move them to a new phone yourself). They are not sent to any server, to advertising or
+to any analytics.</p>
 </div>
 
 <h2>Who is responsible</h2>
@@ -45,7 +46,7 @@ sent to any server, to advertising or to any analytics.</p>
 <h2>What this app does NOT do</h2>
 <ul>
   <li>There is no sign-up, account, username or password. The name you can type for greetings is optional and never leaves the phone.</li>
-  <li>There are no analytics or crash-reporting tools: no Google Analytics, no Crashlytics, nothing similar. The only library that sends its own data to a third party is the advertising one, explained below. The app includes Firebase's remote configuration library (<em>Remote Config</em>), which could adjust advertising without releasing a new version, but it is <strong>switched off</strong>: it does not start or connect to any server. If it is ever switched on, this policy will be updated first.</li>
+  <li>There are no analytics or crash-reporting tools of our own: no Google Analytics, no Crashlytics, nothing similar. The only library that sends its own data to a third party is the advertising one, explained below. The app includes Firebase's remote configuration library (<em>Remote Config</em>), which could adjust advertising without releasing a new version, but it is <strong>switched off</strong>: it does not start or connect to any server. If it is ever switched on, this policy will be updated first.</li>
   <li>No data is sold, rented or shared with third parties for commercial purposes.</li>
   <li><strong>What you drink, your weight, age, sex, and whether you are pregnant or breastfeeding are never sent anywhere.</strong> They are health-related data and stay in the app's private storage. Your daily goal is calculated on the phone.</li>
   <li>GPS is never used in the background and your location is not tracked. Approximate location is only used if you turn on weather adjustment, and only while the app is open (see below).</li>
@@ -59,15 +60,21 @@ sent to any server, to advertising or to any analytics.</p>
   <li>Your daily goals, cups, custom drinks, achievements and challenges.</li>
   <li>Your settings: schedule, reminders, theme, units and language.</li>
   <li>If you turn on weather adjustment: the chosen place (rounded to about 1 km) and the day's forecast.</li>
+  <li>The country of your SIM card (or, if there is none, the system region), which the “More apps by JR Soft” screen checks at that moment to show only the apps available in your country. It is neither stored nor sent. The Google Play links on that screen carry a tag saying they come from this app, without any data about you.</li>
 </ul>
 
-<h3>Backups and exports</h3>
-<p>If Android backup is on, the system keeps an encrypted copy of the app's data in your Google account, as it does for other apps; Google manages it and you control it in Android settings. The files the app creates (backup, CSV and PDF report) are only saved or shared where you choose.</p>
+<h3>Backups, switching phones and exports</h3>
+<p>Android's cloud backup (the one in your Google account) is turned off for this app's data: <strong>none of it is uploaded</strong>. Android does keep a list of the apps you had installed in your account so it can reinstall them, but Google manages that list and it contains no data from this app.</p>
+<p>If, while setting up a new phone, you copy your data directly from the old one, with or without a cable, the app's data (your drinking history, your profile and your settings) may be moved to the new phone. You ask for this transfer and Android carries it out, using its own tool or your phone maker's, under their own terms. According to Android's documentation, it goes from one phone to the other without going through servers. It never goes through ours: JR Soft receives nothing. What the app writes to Health Connect is stored by Health Connect, not by the app; whether it moves to the new phone is up to Android.</p>
+<p>Whether it happens depends on your Android version and phone maker (it doesn't happen on Android 8 or earlier), so we can't guarantee it. If you set up the new phone from your Google account backup without the old phone, this app's data won't come back, because it isn't in that backup.</p>
+<p>Anything that only makes sense on the old phone is not transferred, such as scheduled alarms, the saved weather forecast or your ad choices: the app will ask you again on the new phone.</p>
+<p>The files the app creates (backup, CSV and PDF report) are only saved or shared where you choose.</p>
 
 <h2>Data that does leave the phone</h2>
 
 <h3>Weather (optional): MET Norway</h3>
-<p>If you turn on «Adjust to the heat», the app requests the day's forecast from the public service of the Norwegian Meteorological Institute (<strong>MET Norway</strong>, <code>api.met.no</code>) to add water on hot days. The request contains <strong>coordinates rounded to two decimals</strong> (roughly one kilometre of precision) and an identifier of the app and its version (the <em>User-Agent</em> that service requires). None of your personal data or what you drink is included.</p>
+<p>If you turn on «Adjust to the heat», the app gets the day's forecast from the Norwegian Meteorological Institute (<strong>MET Norway</strong>) to add water on hot days. As MET Norway's terms ask, it does not request it from MET Norway directly: it asks <strong>JR Soft's intermediate server</strong> (<code>aire-sin-sustos.pages.dev</code>, the data website it shares with the Aire sin sustos app, hosted on Cloudflare Pages), which requests it from MET Norway and keeps each point's forecast until a day after it expires, the same for everyone. The request contains <strong>coordinates rounded to two decimals</strong> (roughly one kilometre of precision) and an identifier of the app with a contact email (the <em>User-Agent</em>). None of your personal data or what you drink is included. MET Norway only sees the server, never your IP address. The server keeps no logs of who asks: to stop abuse, it only counts, for one minute, the requests from each IP address, stored as a cryptographic digest that cannot be turned back into the address and is deleted automatically after two minutes. Versions before 1.0.4 asked MET Norway directly, which, according to its terms, stores the IP address and the coordinates of each request in its logs, in its data centre in Oslo.</p>
+<p>The forecast is requested while the app is open or when you change the place or the setting and, so that the day's goal accounts for the heat even if you don't open the app, <strong>at most once a day in the background</strong>, when the day starts and with the last saved place (without checking your location). It is not requested again while the saved one is still valid and, if the server does not respond, the saved one is used, with no retries. The app tells you when it was updated (Settings → Weather and exercise).</p>
 <p>The coordinates come from one of two sources, whichever you choose:</p>
 <ul>
   <li><strong>The phone's approximate location</strong>, with the approximate location permission (<code>ACCESS_COARSE_LOCATION</code>), which is only requested if you turn this option on and only used while the app is open. Never in the background.</li>
@@ -83,12 +90,13 @@ sent to any server, to advertising or to any analytics.</p>
 <p>Data read from Health Connect is only used for those features, stays on the phone, is never sent to any server and is <strong>never used for advertising</strong>. The use of information received from Health Connect adheres to the Health Connect Permissions policy, including the Limited Use requirements. You can revoke the permissions at any time in Health Connect.</p>
 
 <h3>IP address</h3>
-<p>As with any app that connects to the internet, the servers the app talks to receive your IP address: MET Norway (if you use weather) and Google (advertising and city search). This app has no servers of its own and keeps no logs.</p>
+<p>As with any app that connects to the internet, the servers the app talks to receive your IP address: the intermediate weather server on Cloudflare (if you use weather) and Google (advertising and city search). The weather server keeps no logs of who asks (only the abuse count explained above), and MET Norway does not receive yours.</p>
 
 <h3>Advertising: Google AdMob</h3>
 <p>The app shows unobtrusive advertising, served by Google's advertising SDK (AdMob): a banner at the bottom of the history and achievements screens, and native ads (labelled “Ad”) at the end of the Today screen and of a day's details, and in the list of challenges. There are never full-screen ads, and no ads in the welcome screens, settings, the hydration guide, notifications or the widget. That is why it declares the <code>com.google.android.gms.permission.AD_ID</code> permission, which gives access to Android's advertising ID; you can reset or delete this ID in <em>Android Settings → Google → Ads</em>.</p>
 <p>Besides the advertising ID, the AdMob SDK collects the app set ID, interactions with the app and the ads, and diagnostic data (launch time, crashes and energy use). Google may use your IP address to estimate an approximate location, at the level of a city. Google uses this data to serve and measure advertising, for analytics and to prevent fraud, under its own policy.</p>
-<p>In the European Economic Area, the United Kingdom and wherever the law requires it, the app shows Google's consent form (UMP) before serving personalised ads. You can change your choice at any time in Settings → Privacy options for ads.</p>
+<p>In the European Economic Area, the United Kingdom and Switzerland, and wherever the law requires it, the app shows Google's consent form (UMP) before serving personalised ads. You can change your choice at any time in Settings → Privacy options for ads.</p>
+<p>The ads consent message is shown by Google with wording common to all its advertising partners, which is why it mentions precise geolocation. According to Google, its ads SDK only uses the approximate location inferred from the IP address, and this app does not pass it the GPS location. You can refuse that use under “Manage options”.</p>
 <p><strong>Your hydration and health data never reach advertising.</strong> Ad requests are sent without any data about what you drink or your profile. If you refuse consent, you will see non-personalised ads and the app works exactly the same: no feature is locked.</p>
 
 <h2>Permissions the app requests</h2>
@@ -108,8 +116,13 @@ sent to any server, to advertising or to any analytics.</p>
 <table>
   <tr><th>Service</th><th>What for</th><th>Their policy</th></tr>
   <tr>
+    <td>JR Soft's intermediate server on Cloudflare Pages (aire-sin-sustos.pages.dev)</td>
+    <td>Requesting the weather forecast from MET Norway, only if you turn on heat adjustment</td>
+    <td><a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></td>
+  </tr>
+  <tr>
     <td>MET Norway (api.met.no)</td>
-    <td>The weather forecast, only if you turn on heat adjustment</td>
+    <td>The weather forecast (received by the intermediate server, not the app)</td>
     <td><a href="https://api.met.no/doc/TermsOfService">api.met.no/doc/TermsOfService</a></td>
   </tr>
   <tr>
@@ -125,8 +138,11 @@ sent to any server, to advertising or to any analytics.</p>
 </table>
 <p>Weather data comes from MET Norway and is published under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> licence. This app is not affiliated with MET Norway.</p>
 
+<h2>Transfers outside Europe</h2>
+<p>Google (AdMob and the Android geocoder) may process data outside the European Economic Area. Google LLC participates in the EU-U.S. Data Privacy Framework, its UK Extension and the Swiss-U.S. Data Privacy Framework. The intermediate weather server is run by Cloudflare, Inc. (U.S.), which also participates in those three frameworks. MET Norway is in Norway, within the EEA.</p>
+
 <h2>Legal basis and retention</h2>
-<p>Hydration and health data are processed <strong>only on your device</strong> and under your control, with your explicit consent when you enter them: they are not shared with third parties and the controller holds no copy. The use of location and Health Connect is based on your consent when granting those permissions, which you can revoke at any time. For personalised advertising, the legal basis is your <strong>consent</strong>, collected with Google's form (UMP) and revocable from the app's settings.</p>
+<p>Hydration and health data are processed <strong>only on your device</strong> and under your control, with your explicit consent when you enter them: they are not shared with third parties and the controller holds no copy. The use of location and Health Connect is based on your consent when granting those permissions, which you can revoke at any time. For personalised advertising, the legal basis is your <strong>consent</strong>, collected with Google's form (UMP) and revocable from the app's settings. Moving data between phones is something you do with an Android feature; none of it reaches us. The weather server's abuse count is based on the legitimate interest in protecting the service (GDPR, Art. 6(1)(f)).</p>
 <p>Everything the app stores remains until you delete it, uninstall the app or clear its data.</p>
 
 <h2>Your rights</h2>
@@ -137,19 +153,19 @@ sent to any server, to advertising or to any analytics.</p>
   <li><strong>Erasure:</strong> Settings → Data and backup → Delete all data, or uninstall the app. The advertising ID can be reset or deleted in <em>Android Settings → Google → Ads</em>.</li>
   <li><strong>Objection and withdrawal of consent:</strong> Settings → Privacy options for ads; and the location and Health Connect permissions, in Android or Health Connect settings.</li>
 </ul>
-<p>Data collected by Google's library is managed by Google, and rights over it are exercised with Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. You can also complain to the supervisory authority of your country (in Spain, the <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>).</p>
+<p>Data collected by Google's library is managed by Google, and rights over it are exercised with Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. You can also complain to the <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a> (Spain) or to the data protection authority of your country (GDPR, Art. 77).</p>
 
 <h2>Children</h2>
-<p>This app is not directed at children under 13 and does not knowingly collect data from them. If it is used to calculate a child's goal, a responsible adult should do it.</p>
+<p>This app is not directed at children under 16 and does not knowingly collect data from them. If it is used to calculate a child's goal, a responsible adult should do it.</p>
 
 <h2>Changes to this policy</h2>
 <p>If this policy changes substantially, the new version will be published at this same address with a new update date.</p>
 
 <h2>Important notice about the service</h2>
-<p>This app <strong>is not a medical device</strong>: it gives general guidance and does not diagnose or treat anything. If you have kidney, heart or liver disease, or your doctor has limited your fluids, follow their advice rather than the app's. Drinking a lot of water very quickly can be dangerous.</p>
+<p>This app <strong>is not a medical device</strong>: it gives general guidance and does not diagnose, treat, cure or prevent any medical condition. For medical advice, consult a healthcare professional. If you have kidney, heart or liver disease, or your doctor has limited your fluids, follow their advice rather than the app's. Drinking a lot of water very quickly can be dangerous.</p>
 
 <footer>
-<p>Plic · JR Soft (Javier Román Sáez) · <code>com.jrsoft.beberagua</code> · Contact: <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong> · <a href="privacidad-es.html">Español</a></p>
+<p>Plic · JR Soft (Javier Román Sáez) · <code>com.jrsoft.beberagua</code> · Contact: <strong><a href="mailto:demual@gmail.com">demual@gmail.com</a></strong> · <a href="index.html#todos">Other languages</a></p>
 </footer>
 </body>
 </html>
