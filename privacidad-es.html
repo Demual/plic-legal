@@ -31,7 +31,7 @@
 <body>
 
 <h1>Política de privacidad</h1>
-<p class="fecha">Aplicación <strong>Plic</strong> (<code>com.jrsoft.beberagua</code>) · Última actualización: 11 de noviembre de 2026</p>
+<p class="fecha">Aplicación <strong>Plic</strong> (<code>com.jrsoft.beberagua</code>) · Última actualización: 13 de noviembre de 2026</p>
 
 <div class="clave">
 <p><strong>En una frase:</strong> esta aplicación no tiene cuentas de usuario y
@@ -59,7 +59,8 @@ ninguna analítica.</p>
   <li><strong>Lo que bebes</strong>: cada vaso con su hora, la bebida, la cantidad y lo que aporta (hidratación, cafeína, azúcar, calorías y alcohol).</li>
   <li>Tus objetivos de cada día, vasos, bebidas propias, logros y retos.</li>
   <li>Tus ajustes: horario, recordatorios, tema, unidades e idioma.</li>
-  <li>Si activas el ajuste al tiempo: el lugar elegido (redondeado a unos 1 km) y la previsión del día.</li>
+  <li>Si dices que no al permiso de notificaciones, una marca con ese «no», para saber que Android ya no volverá a preguntar y llevarte a los ajustes. Se borra en cuanto das el permiso.</li>
+  <li>Si activas el ajuste al tiempo: el lugar elegido (redondeado a unos 10 km; si lo elegiste antes de la versión 1.0.7, a 1 km, más o menos, hasta que lo cambies) y la previsión del día.</li>
   <li>El país de tu tarjeta SIM (o, si no hay, el de la región del sistema), que la pantalla «Más apps de JR Soft» consulta en el momento para enseñar solo las apps disponibles en tu país. No se guarda ni se envía. Los enlaces a Google Play de esa pantalla llevan una etiqueta que dice que vienen de esta aplicación, sin ningún dato tuyo.</li>
 </ul>
 
@@ -67,13 +68,13 @@ ninguna analítica.</p>
 <p>La copia de seguridad de Android en la nube (la de tu cuenta de Google) está desactivada para los datos de esta app: <strong>no se sube ninguno</strong>. Android sí guarda en tu cuenta la lista de las apps que tenías instaladas, para volver a instalarlas, pero esa lista la gestiona Google y no lleva datos de la app.</p>
 <p>Si al configurar un móvil nuevo copias tus datos directamente desde el antiguo, con cable o sin él, los datos de la app (tu historial de lo que bebes, tu perfil y tus ajustes) pueden pasar al móvil nuevo. Ese traspaso lo pides tú y lo hace Android, con su herramienta o con la del fabricante del móvil y con sus propias condiciones. Según la documentación de Android, va de un móvil a otro sin pasar por servidores. En ningún caso pasa por los nuestros: JR Soft no recibe nada. Lo que la app escribe en Salud conectada (Health Connect) lo guarda Salud conectada, no la app; si pasa al móvil nuevo, lo decide Android.</p>
 <p>Que se haga depende de la versión de Android y del fabricante (en Android 8 o anterior no se hace), así que no podemos garantizarlo. Si configuras el móvil nuevo desde la copia de tu cuenta de Google, sin el antiguo, los datos de esta app no vuelven, porque no están en esa copia.</p>
-<p>No se traspasa lo que solo sirve en el móvil antiguo, como las alarmas programadas, la previsión del tiempo guardada o tu elección sobre los anuncios: en el móvil nuevo la app te la volverá a pedir.</p>
+<p>No se traspasa lo que solo sirve en el móvil antiguo, como las alarmas programadas, la previsión del tiempo guardada, lo que contestaste al permiso de notificaciones o tu elección sobre los anuncios: en el móvil nuevo la app te la volverá a pedir.</p>
 <p>Los ficheros que crea la app (copia de seguridad, CSV e informe PDF) solo se guardan o se comparten donde tú elijas.</p>
 
 <h2>Datos que sí salen del teléfono</h2>
 
 <h3>El tiempo (opcional): MET Norway</h3>
-<p>Si activas «Ajustar al calor», la aplicación consulta la previsión del día del Instituto Meteorológico de Noruega (<strong>MET Norway</strong>) para sumar agua los días de calor. No se la pide directamente a MET Norway, como piden sus condiciones: se la pide al <strong>servidor intermedio de JR Soft</strong> (<code>aire-sin-sustos.pages.dev</code>, la web de datos que comparte con la app Aire sin sustos, alojada en Cloudflare Pages), que la pide a MET Norway y guarda la previsión de cada punto hasta un día después de que caduque, la misma para todos. En la petición viajan unas <strong>coordenadas redondeadas a dos decimales</strong> (con un margen de un kilómetro, más o menos) y un identificador de la aplicación con un correo de contacto (el <em>User-Agent</em>). No viaja ningún dato tuyo ni lo que bebes. MET Norway solo ve el servidor, nunca tu dirección IP. El servidor no guarda registros de quién pregunta: para frenar abusos, solo cuenta durante un minuto las peticiones de cada dirección IP, guardada como un resumen criptográfico que no permite recuperarla y que se borra solo a los dos minutos. Las versiones anteriores a la 1.0.4 pedían el tiempo directamente a MET Norway, que, según sus condiciones, guarda en sus registros, en su centro de datos de Oslo, la dirección IP y las coordenadas de cada petición.</p>
+<p>Si activas «Ajustar al calor», la aplicación consulta la previsión del día del Instituto Meteorológico de Noruega (<strong>MET Norway</strong>) para sumar agua los días de calor. No se la pide directamente a MET Norway, como piden sus condiciones: se la pide al <strong>servidor intermedio de JR Soft</strong> (<code>aire-sin-sustos.pages.dev</code>, la web de datos que comparte con la app Aire sin sustos, alojada en Cloudflare Pages), que la pide a MET Norway y guarda la previsión de cada punto hasta un día después de que caduque, la misma para todos. En la petición viajan unas <strong>coordenadas redondeadas a un decimal</strong> (con un margen de unos diez kilómetros) y un identificador de la aplicación con un correo de contacto (el <em>User-Agent</em>). No viaja ningún dato tuyo ni lo que bebes. MET Norway solo ve el servidor, nunca tu dirección IP. El servidor no guarda registros de quién pregunta: para frenar abusos, solo cuenta durante un minuto las peticiones de cada dirección IP, guardada como un resumen criptográfico que no permite recuperarla y que se borra solo a los dos minutos. Las versiones anteriores a la 1.0.4 pedían el tiempo directamente a MET Norway, que, según sus condiciones, guarda en sus registros, en su centro de datos de Oslo, la dirección IP y las coordenadas de cada petición.</p>
 <p>La previsión se pide con la aplicación abierta o cuando cambias el lugar o el ajuste y, para que el objetivo del día tenga en cuenta el calor aunque no abras la app, <strong>como mucho una vez al día en segundo plano</strong>, al empezar el día y con el último lugar guardado (sin mirar tu ubicación). No se vuelve a pedir mientras la guardada siga vigente y, si el servidor no responde, se usa la guardada, sin reintentos. La app te dice de cuándo es (Ajustes → Tiempo y ejercicio).</p>
 <p>Las coordenadas salen de una de estas dos fuentes, la que elijas:</p>
 <ul>

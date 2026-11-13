@@ -31,7 +31,7 @@
 <body>
 
 <h1>Integritetspolicy</h1>
-<p class="fecha">Appen <strong>Plic</strong> (<code>com.jrsoft.beberagua</code>) · Senast uppdaterad: 11 november 2026</p>
+<p class="fecha">Appen <strong>Plic</strong> (<code>com.jrsoft.beberagua</code>) · Senast uppdaterad: 13 november 2026</p>
 <p>Det här är en översättning. Om den här versionen och den spanska versionen skiljer sig åt gäller den spanska versionen: <a href="privacidad-es.html">Política de privacidad (español)</a>.</p>
 
 <div class="clave">
@@ -60,7 +60,8 @@ och inte till någon analys.</p>
   <li><strong>Det du dricker</strong>: varje glas med tid, dryck, mängd och vad det ger (vätskevärde, koffein, socker, kalorier och alkohol).</li>
   <li>Dina mål för varje dag, glas, egna drycker, prestationer och utmaningar.</li>
   <li>Dina inställningar: schema, påminnelser, tema, enheter och språk.</li>
-  <li>Om du slår på väderanpassningen: den valda platsen (avrundad till cirka 1 km) och dagens prognos.</li>
+  <li>Om du säger nej till behörigheten för aviseringar: en markering av det ”nej”, så att appen vet att Android inte frågar igen och kan ta dig till inställningarna. Den raderas så snart du ger behörigheten.</li>
+  <li>Om du slår på väderanpassningen: den valda platsen (avrundad till cirka 10 km; om du valde den före version 1.0.7, till 1 km, mer eller mindre, tills du ändrar den) och dagens prognos.</li>
   <li>Landet för ditt SIM-kort (eller, om det saknas, systemets region), som skärmen ”Fler appar från JR Soft” läser av i stunden för att bara visa de appar som finns i ditt land. Det varken sparas eller skickas. Länkarna till Google Play på den skärmen har en tagg som säger att de kommer från den här appen, utan några data om dig.</li>
 </ul>
 
@@ -68,13 +69,13 @@ och inte till någon analys.</p>
 <p>Androids säkerhetskopiering i molnet (den i ditt Google-konto) är avstängd för den här appens data: <strong>ingenting laddas upp</strong>. Android sparar däremot i ditt konto listan över de appar du hade installerade, för att kunna installera dem igen, men den listan hanteras av Google och innehåller inga data från appen.</p>
 <p>Om du när du ställer in en ny telefon kopierar dina data direkt från den gamla, med eller utan kabel, kan appens data (din historik över vad du dricker, din profil och dina inställningar) flyttas över till den nya telefonen. Den överföringen begär du själv och Android utför den, med sitt eget verktyg eller telefontillverkarens och med deras egna villkor. Enligt Androids dokumentation går den från en telefon till en annan utan att passera servrar. Den går under inga omständigheter via våra: JR Soft tar inte emot något. Det som appen skriver till Health Connect lagras av Health Connect, inte av appen; om det flyttas till den nya telefonen avgör Android.</p>
 <p>Om det sker beror på Android-version och tillverkare (i Android 8 eller äldre sker det inte), så vi kan inte garantera det. Om du ställer in den nya telefonen från säkerhetskopian i ditt Google-konto, utan den gamla, kommer den här appens data inte tillbaka, eftersom de inte finns i den kopian.</p>
-<p>Sådant som bara fungerar på den gamla telefonen överförs inte, till exempel schemalagda alarm, den sparade väderprognosen eller ditt val om annonserna: på den nya telefonen frågar appen dig igen.</p>
+<p>Sådant som bara fungerar på den gamla telefonen överförs inte, till exempel schemalagda alarm, den sparade väderprognosen, ditt svar på behörigheten för aviseringar eller ditt val om annonserna: på den nya telefonen frågar appen dig igen.</p>
 <p>Filerna som appen skapar (säkerhetskopia, CSV och PDF-rapport) sparas eller delas bara där du väljer.</p>
 
 <h2>Data som lämnar telefonen</h2>
 
 <h3>Vädret (valfritt): MET Norway</h3>
-<p>Om du slår på ”Anpassa efter värmen” hämtar appen dagens prognos från Norska meteorologiska institutet (<strong>MET Norway</strong>) för att lägga till vatten på varma dagar. Den begär den inte direkt från MET Norway, så som deras villkor ber om: den begär den från <strong>JR Softs mellanserver</strong> (<code>aire-sin-sustos.pages.dev</code>, den datawebbplats som den delar med appen Aire sin sustos, värd hos Cloudflare Pages), som begär den från MET Norway och sparar prognosen för varje punkt till en dag efter att den har gått ut, densamma för alla. I begäran skickas <strong>koordinater avrundade till två decimaler</strong> (med en marginal på ungefär en kilometer) och en identifierare för appen med en kontaktadress via e-post (<em>User-Agent</em>). Inga uppgifter om dig eller om vad du dricker skickas. MET Norway ser bara servern, aldrig din IP-adress. Servern för inga loggar över vem som frågar: för att stoppa missbruk räknar den bara under en minut förfrågningarna från varje IP-adress, sparad som ett kryptografiskt hashvärde som inte går att återställa till adressen och som raderas automatiskt efter två minuter. Versioner före 1.0.4 frågade MET Norway direkt, som enligt sina villkor sparar IP-adressen och koordinaterna för varje förfrågan i sina loggar, i sitt datacenter i Oslo.</p>
+<p>Om du slår på ”Anpassa efter värmen” hämtar appen dagens prognos från Norska meteorologiska institutet (<strong>MET Norway</strong>) för att lägga till vatten på varma dagar. Den begär den inte direkt från MET Norway, så som deras villkor ber om: den begär den från <strong>JR Softs mellanserver</strong> (<code>aire-sin-sustos.pages.dev</code>, den datawebbplats som den delar med appen Aire sin sustos, värd hos Cloudflare Pages), som begär den från MET Norway och sparar prognosen för varje punkt till en dag efter att den har gått ut, densamma för alla. I begäran skickas <strong>koordinater avrundade till en decimal</strong> (med en marginal på ungefär tio kilometer) och en identifierare för appen med en kontaktadress via e-post (<em>User-Agent</em>). Inga uppgifter om dig eller om vad du dricker skickas. MET Norway ser bara servern, aldrig din IP-adress. Servern för inga loggar över vem som frågar: för att stoppa missbruk räknar den bara under en minut förfrågningarna från varje IP-adress, sparad som ett kryptografiskt hashvärde som inte går att återställa till adressen och som raderas automatiskt efter två minuter. Versioner före 1.0.4 frågade MET Norway direkt, som enligt sina villkor sparar IP-adressen och koordinaterna för varje förfrågan i sina loggar, i sitt datacenter i Oslo.</p>
 <p>Prognosen begärs medan appen är öppen eller när du byter plats eller inställning och, så att dagens mål tar hänsyn till värmen även om du inte öppnar appen, <strong>högst en gång om dagen i bakgrunden</strong>, när dagen börjar och med den senast sparade platsen (utan att titta på din plats). Den begärs inte på nytt så länge den sparade fortfarande gäller och, om servern inte svarar, används den sparade, utan nya försök. Appen visar från vilken tidpunkt den är (Inställningar → Väder och träning).</p>
 <p>Koordinaterna kommer från en av de här två källorna, den du väljer:</p>
 <ul>
